@@ -555,7 +555,9 @@ class Book {
 	 */
 	unarchive(input, encoding) {
 		this.archive = new Archive();
-		return this.archive.open(input, encoding);
+  		return encoding === 'base64'
+				? this.archive.openUrl(input, encoding)
+				: this.archive.open(input, encoding);
 	}
 
 	/**
