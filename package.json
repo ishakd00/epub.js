@@ -10,7 +10,6 @@
     "test": "test"
   },
   "scripts": {
-    "install": "npm run build",
     "test": "./node_modules/.bin/karma start --single-run --browsers ChromeHeadlessNoSandbox",
     "documentation": "./node_modules/.bin/gulp docs",
     "lint": "./node_modules/.bin/eslint -c .eslintrc.js src; exit 0",
